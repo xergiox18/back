@@ -1,0 +1,6 @@
+@Opi.ContractPrediction.Api.Queries_HostAddress = http://localhost:5106
+
+GET {{Opi.ContractPrediction.Api.Queries_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+
+	<data name="Title.BadRequest" xml:space="preserve">
+		<value>Solicitud inválida</value>
+	</data>
+	<data name="Title.NotFound" xml:space="preserve">
+		<value>No encontrado</value>
+	</data>
+	<data name="Title.Conflict" xml:space="preserve">
+		<value>Conflicto</value>
+	</data>
+	<data name="Title.Validation" xml:space="preserve">
+		<value>Validación fallida</value>
+	</data>
+	<data name="Title.Unexpected" xml:space="preserve">
+		<value>Error inesperado</value>
+	</data>
+
+	<data name="Error.FieldsInvalidOrMissing" xml:space="preserve">
+		<value>Faltan campos requeridos o algunos valores no son válidos.</value>
+	</data>
+	<data name="Error.Invalid" xml:space="preserve">
+		<value>El valor no es válido.</value>
+	</data>
+	<data name="Error.UniqueViolation" xml:space="preserve">
+		<value>Ya existe un registro con los mismos datos.</value>
+	</data>
+	<data name="Error.Unexpected" xml:space="preserve">
+		<value>Ocurrió un error inesperado.</value>
+	</data>
+
+	<data name="Error.NotFound" xml:space="preserve">
+		<value>El recurso solicitado no existe o no está disponible.</value>
+	</data>
+	<data name="Error.Conflict" xml:space="preserve">
+		<value>No se pudo completar la operación debido a un conflicto con el estado actual.</value>
+	</data>
+	<data name="Error.BadRequest" xml:space="preserve">
+		<value>La solicitud contiene datos inválidos o incompletos.</value>
+	</data>
+</root>
