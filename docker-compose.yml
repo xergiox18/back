@@ -1,0 +1,40 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: opi-postgres
+    restart: always
+    environment:
+      POSTGRES_DB: opi_contract_prediction
+      POSTGRES_USER: opi_user
+      POSTGRES_PASSWORD: opi_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - opi_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U opi_user -d opi_contract_prediction"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  api:
+    container_name: opi-api
+    build:
+      context: .
+      dockerfile: Presentation/ClasificationProjects.Opi.Back.Api/Dockerfile
+    restart: always
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:8080
+      ConnectionStrings__Default: Host=postgres;Port=5432;Database=opi_contract_prediction;Username=opi_user;Password=opi_password
+      AzureAd__Instance: https://login.microsoftonline.com
+      AzureAd__TenantId: eb6ca8f6-d6a8-4730-ae64-246af8528180
+      AzureAd__ClientId: 4d3529db-8e56-4209-a7b2-0ea1240a342e
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  opi_postgres_data:
